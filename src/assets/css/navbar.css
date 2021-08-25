@@ -1,0 +1,8 @@
+nav {
+    background-color: #110D32;
+    padding-left: 20vw;
+    height: 7vh;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}

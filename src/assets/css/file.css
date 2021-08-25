@@ -1,0 +1,16 @@
+.file {
+    width: 170px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: start;
+    margin: 10px 0 10px 2vw;
+    padding-left: 10px;
+    border-left: 1px solid aliceblue;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+#rootUl > li > ul > .file {
+    margin-left: 1.5vw;
+}

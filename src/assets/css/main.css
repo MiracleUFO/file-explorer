@@ -1,0 +1,13 @@
+.main-body-flex {
+    display: flex;
+}
+
+.main-body-flex main {
+    height: 93vh;
+    width: 85vw;
+    overflow-y: scroll;
+}
+
+main {
+    background-color: #1F193D;
+}

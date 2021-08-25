@@ -1,0 +1,48 @@
+.sidebar {
+    background-color: #110D32;
+    height: 93vh;
+    width: 12vw;
+    color: aliceblue;
+    padding: 0 1vw 0 1vw;
+}
+
+ul, #rootUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 0.5vw;
+}
+
+#rootUl {
+    text-align: start;
+}
+
+  .caret {
+    cursor: pointer;
+    user-select: none; 
+  }
+  
+  .caret::before {
+    content: "\25B6";
+    color: whitesmoke;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+  
+  .nested {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+
+  li span {
+      margin-bottom: 10px;
+      margin-left: 1.5vw;
+  }
