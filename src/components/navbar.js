@@ -1,10 +1,8 @@
-import React,  {useRef, useEffect, useState} from 'react';
+import React from 'react';
 import '../assets/css/navbar.css';
 
 
-const NavBar = (props) => {
-    const [state, setState] = useState('')
-    
+const NavBar = (props) => {    
 
     return (
       <nav>

@@ -1,11 +1,8 @@
-import React,  {useEffect, useState} from 'react';
+import React,  {useEffect} from 'react';
 import '../assets/css/sidebar.css';
 import File from './file';
 
 const SideBar = (props) => {
-
-    const [state, setState] = useState('');
-
 
     //  Adds click event to ever toggler caret in DOM
     useEffect(() => {

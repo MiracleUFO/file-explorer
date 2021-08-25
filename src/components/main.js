@@ -1,13 +1,10 @@
-import React,  {useState} from 'react';
+import React from 'react';
 import NavBar from './navbar';
 import SideBar from './sidebar';
 import '../assets/css/main.css';
 
 
 const Main = (props) => {
-
-    const [state, setState] = useState('');
-    
 
     return (
         <section>
