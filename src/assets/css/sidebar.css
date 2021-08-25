@@ -1,21 +1,24 @@
-.sidebar {
+  .sidebar {
     background-color: #110D32;
     height: 93vh;
     width: 12vw;
     color: aliceblue;
     padding: 0 1vw 0 1vw;
+    font-family: sans-serif;
+    font-size: 0.9em;
 }
 
-ul, #rootUl {
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     margin-top: 20px;
     margin-left: 0.5vw;
-}
+  }
 
 #rootUl {
     text-align: start;
+    margin-left: 0 !important;
 }
 
   .caret {
