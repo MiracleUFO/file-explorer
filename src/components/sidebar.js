@@ -16,9 +16,7 @@ const SideBar = (props) => {
                 this.classList.toggle("caret-down");
             });
         }
-
-        console.log(props.root.content)
-    },[])
+    },[props.root.content])
 
 
     return (
