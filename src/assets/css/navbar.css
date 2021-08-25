@@ -6,3 +6,9 @@ nav {
     display: flex;
     align-items: center;
 }
+
+.icon {
+    width: 1.8vw;
+    position: absolute;
+    left: 40px;
+}

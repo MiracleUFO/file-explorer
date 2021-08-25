@@ -1,6 +1,9 @@
 import React,  {useEffect} from 'react';
-import '../assets/css/sidebar.css';
+
 import File from './file';
+
+import '../assets/css/sidebar.css';
+
 
 const SideBar = (props) => {
 

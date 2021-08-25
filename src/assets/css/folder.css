@@ -1,0 +1,31 @@
+.folder, .folder-file {
+    color: orange;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.folder-info-hide, .folder-content, .openFolder{
+    display: none;
+}
+
+.folder-content-show {
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+}
+
+.openFolder-show {
+    display: inline;
+}
+
+.folder-content-show li {
+    width: 200px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: start;
+    margin: 10px 0 10px 2vw;
+    padding-left: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+}

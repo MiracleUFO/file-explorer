@@ -1,4 +1,4 @@
-.main-body-flex {
+.main-body-flex, .main {
     display: flex;
 }
 
@@ -10,4 +10,10 @@
 
 main {
     background-color: #1F193D;
+}
+
+.main {
+    padding: 90px 5vh; 
+    box-sizing: border-box;
+    justify-content: space-evenly;
 }

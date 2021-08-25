@@ -1,6 +1,9 @@
 import React from 'react';
+
 import NavBar from './navbar';
 import SideBar from './sidebar';
+import Folder from './folder';
+
 import '../assets/css/main.css';
 
 
@@ -11,8 +14,8 @@ const Main = (props) => {
             <NavBar />
             <section className="main-body-flex">
                <SideBar root={props.root} />
-                <main>
-                    HI THERE 
+                <main className="main">
+                   <Folder folders={props.root.content} />
                 </main> 
             </section>    
         </section>
