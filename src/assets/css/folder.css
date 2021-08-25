@@ -1,24 +1,35 @@
-.folder, .folder-file {
-    color: orange;
-    display: inline-block;
-    margin-bottom: 20px;
+.wrapper, .wrapper-child{
+    width: 100%;
 }
 
-.folder-info-hide, .folder-content, .openFolder{
+.wrapper-child {
+    color: orange;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.folder, .folder-file {
+    display: inline-block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.folder-info-hide, .folder-content, .openFolder {
     display: none;
 }
 
 .folder-content-show {
     display: flex;
     justify-content: space-between;
-    width: 35vw;
+    width: 40vw;
 }
 
 .openFolder-show {
     display: inline;
 }
 
-.folder-content-show li {
+.folder-content-show li, .add-folder {
     width: 200px;
     overflow-x: hidden;
     text-overflow: ellipsis;
@@ -29,3 +40,42 @@
     white-space: nowrap;
     cursor: pointer;
 }
+
+.add-folder-hide {
+    display: none;
+}
+
+.add-folder p {
+    margin: 0.3em;
+}
+
+.folder-content p {
+    text-align: justify;
+}
+
+form {
+   margin-bottom: 60px; 
+}
+
+input {
+    width: 50vw;
+    padding: 10px;
+    
+}
+
+form button {  
+    color: white;
+    font-weight: bold;
+    background: purple;
+    padding: 10px;
+}
+
+.input-hide {
+    display: none;
+}
+
+.input-show {
+    display: block;
+}
+
+

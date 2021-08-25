@@ -8,7 +8,10 @@ const NavBar = (props) => {
 
     return (
       <nav>
-        <img src={AppIcon} className="icon" alt="App icon" />
+        <div className="icon">
+          <img src={AppIcon}  alt="App icon" /><span><b>Xplorer</b></span>
+        </div>
+        
         root /
       </nav>
     )
