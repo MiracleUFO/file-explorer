@@ -25,7 +25,7 @@ const SideBar = (props) => {
     return (
         <section className="sidebar">
             <ul id="rootUl">
-                <li><span className="caret">{props.root.value} folder</span>
+                <li><span className="caret">root folder</span>
                     <ul className="nested">
                         {
                             props.root.content.map((item, index) => item.type === 'folder' ? 
