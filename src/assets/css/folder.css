@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.wrapper-child {
+.wrapper-child, .folder-content-show {
     color: orange;
     display: flex;
     box-sizing: border-box;
@@ -23,7 +23,8 @@
 .folder-content-show {
     display: flex;
     justify-content: space-between;
-    width: 40vw;
+    width: 30%;
+    position: absolute;
 }
 
 .openFolder-show {

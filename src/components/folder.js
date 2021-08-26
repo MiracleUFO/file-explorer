@@ -70,7 +70,20 @@ const Folder = (props) => {
 
             if (folderID === 0) {
                 setFolderState([...folderState, newFolder]);
-            }  
+            }  else {
+
+                let oldState = [...folderState];
+
+                if (!oldState[folderID].content?.folders) {
+                    
+                    let newProp = {folders: []}
+                    oldState[folderID].content = {...oldState[folderID].content, ...newProp};
+                }
+
+                oldState[folderID].content.folders.push(newFolder);
+                console.log(oldState[folderID].content.folders)
+                setFolderState([...oldState])
+            }
 
             setFolderName('');
 
@@ -109,6 +122,16 @@ const Folder = (props) => {
                                 </li>   
                                 : null
                             )}
+                            {content.content?.folders ? 
+                                content.content?.folders.map((folder, index) => folder.type === 'folder' ?
+                                    <li key={index} title={folder.name}>
+                                        <img src={FolderImage} alt="file" />
+                                        <p>{folder.name}</p>
+                                    </li>   
+                                    : null
+                                )
+                                : null
+                            }
                             <div className="add-folder" data-index={index}>
                                 <img src={AddFolderImage} alt="file" />
                                 <p>Add new folder</p>
