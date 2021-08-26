@@ -50,15 +50,11 @@ const Folder = (props) => {
 
         //  Reveals input field when add new folder icon is clicked
         for (let i = 0; i < addFolderArray.length; i++) {
-            addFolderArray[i].addEventListener("click", () => {
+            addFolderArray[i].addEventListener("click", function () {
 
                 document.getElementById("input-form").classList.toggle("input-show");
-
-                setFolderID(addFolderArray[i].dataset.index);
-
-                if (addFolderArray[i] === rootAddFolder) {
-                    setFolderID(0);
-                }
+                
+                setFolderID(Number(this.dataset.index));
             })
         }    
     }, [props.folder]); 
@@ -67,21 +63,20 @@ const Folder = (props) => {
     let handleSubmit = (e) => {
 
         e.preventDefault();
-        
-        console.log(folderID)
 
         if (folderNameInput) {
 
-            let newFolder = {name: folderNameInput}
-            let newState = folderState;
+            let newFolder = {name: folderNameInput, type: 'folder'}
 
             if (folderID === 0) {
-                
-                newState.push(newFolder);
-                setFolderState(newState);   //  Map stil uses old state, will fix
-
-                document.getElementById("wrapper-child").innerHTML += `<div className="folder-info"><img src=${FolderImage} alt="folder" title="Open folder" /><p>${folderNameInput}</p></div>` //  Hack
+                setFolderState([...folderState, newFolder]);
             }  
+
+            setFolderName('');
+
+            e.target.value = '';
+
+            document.getElementById("input-form").classList.toggle("input-show");
         }
         
     }
@@ -107,7 +102,7 @@ const Folder = (props) => {
                         </div>
             
                         <ul className="folder-content">
-                            {content.content.files.map((file, index) => typeof(file) === 'string' ?
+                            {content.content?.files.map((file, index) => typeof(file) === 'string' ?
                                 <li key={index} title={file}>
                                     <img src={FileImage} alt="file" />
                                     <p>{file}</p>
@@ -124,7 +119,7 @@ const Folder = (props) => {
                     )
                 }
 
-                <div className="add-folder" id="root-add-folder">
+                <div className="add-folder" id="root-add-folder" data-index="0">
                     <img src={AddFolderImage} alt="file" />
                     <p>Add new folder</p>
                 </div>

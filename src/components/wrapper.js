@@ -1,21 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Main from './main';
 import Folders from '../constants/folders';
 import Files from '../constants/files';
 
 
-export const Wrapper = (props) => {
-    
-  class TreeNode {
-    constructor(value) {
-      this.value = value;
-      this.content = [];
-    }
-  }
+export const Wrapper = () => {
 
-  let root = new TreeNode('root');
-  
+  const [stateRoot, setRoot] = useState({});
+
+  let root = {content: []};
+    
   let rootFolders = [
     ...Folders
   ]
@@ -30,10 +25,10 @@ export const Wrapper = (props) => {
     rootFiles.map(file => root.content.push(file));
 
     rootFolders.map(folder => root.content.push(folder));
-
   }
 
-  buildRoot();
+  
+  buildRoot()
 
     return (
       <main>
