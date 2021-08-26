@@ -81,7 +81,7 @@ const Folder = (props) => {
                 }
 
                 oldState[folderID].content.folders.push(newFolder);
-                console.log(oldState[folderID].content.folders)
+                
                 setFolderState([...oldState])
             }
 
