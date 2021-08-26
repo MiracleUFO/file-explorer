@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import Main from './main';
 import Folders from '../constants/folders';
@@ -6,8 +6,6 @@ import Files from '../constants/files';
 
 
 export const Wrapper = () => {
-
-  const [stateRoot, setRoot] = useState({});
 
   let root = {content: []};
     
